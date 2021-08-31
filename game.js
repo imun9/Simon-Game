@@ -4,7 +4,7 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var level = 0;
 var started = false;
 
-$(document).click(function() {
+$(document).mousemove(function() {
   if (!started) {
 
     $("#level-title").text("Level " + level);
@@ -61,12 +61,15 @@ function checkAnswer(currentLevel){
     }
   }
   else {
-    playSound("wrong")
-    $("#level-title").text("Game Over, Press on Screen to Restart")
+
+    playSound("wrong");
     $("body").addClass("game-over");
+      $("#level-title").text("Game Over, Press Any Key to Restart");
     setTimeout(function(){
+
       $("body").removeClass("game-over");
-    },400);
+    },200);
+
     startOver();
   }
 

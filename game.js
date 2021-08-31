@@ -4,7 +4,7 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var level = 0;
 var started = false;
 
-$(document).keypress(function() {
+$(document).mousedown(function() {
   if (!started) {
 
     $("#level-title").text("Level " + level);
@@ -62,7 +62,7 @@ function checkAnswer(currentLevel){
   }
   else {
     playSound("wrong")
-    $("#level-title").text("Game Over, Press Any Key to Restart")
+    $("#level-title").text("Game Over, Press on Screen to Restart")
     $("body").addClass("game-over");
     setTimeout(function(){
       $("body").removeClass("game-over");

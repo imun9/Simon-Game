@@ -4,7 +4,7 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var level = 0;
 var started = false;
 
-$(document).mousedown(function() {
+$(document).click(function() {
   if (!started) {
 
     $("#level-title").text("Level " + level);

@@ -64,11 +64,11 @@ function checkAnswer(currentLevel){
 
     playSound("wrong");
     $("body").addClass("game-over");
-      $("#level-title").text("Game Over, Press Any Key to Restart");
+      $("#level-title").text("Game Over, Press on screen to Restart");
     setTimeout(function(){
 
       $("body").removeClass("game-over");
-    },500);
+    },700);
 
     startOver();
   }
